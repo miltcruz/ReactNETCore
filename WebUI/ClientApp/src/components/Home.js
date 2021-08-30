@@ -1,22 +1,57 @@
 import React from 'react';
+import { Row, Col } from 'reactstrap'
 
 export const Home = () => {
-  return (
-    <div>
-      <h1>Hello, world!</h1>
-      <p>Welcome to your new single-page application, built with:</p>
-      <ul>
-        <li><a href='https://get.asp.net/'>ASP.NET Core</a> and <a href='https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx'>C#</a> for cross-platform server-side code</li>
-        <li><a href='https://facebook.github.io/react/'>React</a> for client-side code</li>
-        <li><a href='http://getbootstrap.com/'>Bootstrap</a> for layout and styling</li>
-      </ul>
-      <p>To help you get started, we have also set up:</p>
-      <ul>
-        <li><strong>Client-side navigation</strong>. For example, click <em>Counter</em> then <em>Back</em> to return here.</li>
-        <li><strong>Development server integration</strong>. In development mode, the development server from <code>create-react-app</code> runs in the background automatically, so your client-side resources are dynamically built on demand and the page refreshes when you modify any file.</li>
-        <li><strong>Efficient production builds</strong>. In production mode, development-time features are disabled, and your <code>dotnet publish</code> configuration produces minified, efficiently bundled JavaScript files.</li>
-      </ul>
-      <p>The <code>ClientApp</code> subdirectory is a standard React application based on the <code>create-react-app</code> template. If you open a command prompt in that directory, you can run <code>npm</code> commands such as <code>npm test</code> or <code>npm install</code>.</p>
-    </div>
-  )
+
+    const style = {
+        container: {
+            backgroundColor: '#96a8a0',
+            padding: '5%',
+            textAlign: 'center'
+        },
+        profileImage: {
+            width: '15rem',
+            height: '15rem',
+            borderRadius: '100%'
+        },
+    }
+
+    return (
+        <div style={style.container} >
+            <Row>
+                <Col>
+                    <img
+                        src="img/Milton-Profile.jpg"
+                        alt="Milton's Profile Picture"
+                        style={style.profileImage}
+                    />
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                    <h1><strong>Hi, My name is Milton Cruz.</strong></h1>
+                    <p>
+                        I am a robust problem solver with Front-End and Back-End experience.
+                        I have been in the IT Industry for over 11 years, and my diverse
+                        technical background has given me the ability to leverage full-stack
+                        expertise to build interactive and user-centered web and mobile applications.
+                        Extensive expertise in large system architecture development,
+                        as well as network design and configuration.
+                    </p>
+                    <h4>
+                        About this project:
+                    </h4>
+                    <p>
+                        This is a Single Page App (SPA) with React and ASP.NET Core following the principles of Clean Architecture.
+                    </p>
+                    <ul>
+                        <li>Domain: This layer contains all entities, enums, exceptions, interfaces, types and logic.</li>
+                        <li>Application: This layer contains all application logic.</li>
+                        <li>Infrastructure: This layer contains classes for accessing external resources.</li>
+                        <li>WebUI: This layer depends on both the Application and Infrastructure layers.</li>
+                    </ul>
+                </Col>
+            </Row>
+        </div>
+    )
 }

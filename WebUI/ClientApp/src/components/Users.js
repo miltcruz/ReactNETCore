@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Row, Col } from 'reactstrap'
+import { Row, Col } from 'reactstrap'
 import { CreateUser } from './CreateUser'
 import { getUsers, addUser } from '../services/UserService'
 import { DisplayBoard } from './DisplayBoard'
