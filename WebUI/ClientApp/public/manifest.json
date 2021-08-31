@@ -1,6 +1,6 @@
 {
-  "short_name": "WebUI",
-  "name": "WebUI",
+  "short_name": "React .NET Core",
+  "name": "ReactNETCore",
   "icons": [
     {
       "src": "favicon.ico",

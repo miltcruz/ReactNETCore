@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button } from 'reactstrap'
 
-export const DisplayBoard = ({ numberOfUsers, getAllUsers }) => {
+export const DisplayBoard = ({ numberOfCustomers, getAllCustomers }) => {
 
     const style = {
         displayBoard: {
@@ -21,13 +21,13 @@ export const DisplayBoard = ({ numberOfUsers, getAllUsers }) => {
     return (
         <div style={style.displayBoard}>
             <h4 style={style.title}>
-                Users
+                Customers
             </h4>
             <div style={style.number}>
-                {numberOfUsers}
+                {numberOfCustomers}
             </div>
             <div>
-                <Button onClick={(e) => getAllUsers()} color="success">Get All Users</Button>
+                <Button onClick={(e) => getAllCustomers()} color="success">Get All Customers</Button>
             </div>
         </div>
     )

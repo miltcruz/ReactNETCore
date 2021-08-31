@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Collapse, Container, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import { LoginMenu } from './api-authorization/LoginMenu';
 import './NavMenu.css';
 
 export const NavMenu = (props) => {
@@ -28,8 +29,10 @@ export const NavMenu = (props) => {
                                 <NavLink tag={Link} className="text-dark" to="/weather">Weather</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink tag={Link} className="text-dark" to="/users">Users</NavLink>
+                                <NavLink tag={Link} className="text-dark" to="/customers">Customers</NavLink>
                             </NavItem>
+                            <LoginMenu>
+                            </LoginMenu>
                         </ul>
                     </Collapse>
                 </Container>

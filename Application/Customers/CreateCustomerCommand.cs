@@ -1,13 +1,12 @@
 ﻿using Application.Interfaces;
 using Domain.Entities;
 using MediatR;
-using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Application.Users
+namespace Application.Customers
 {
-    public class CreateUserCommand : IRequest<int>
+    public class CreateCustomerCommand : IRequest<int>
     {
         public string FirstName { get; set; }
 
@@ -16,7 +15,7 @@ namespace Application.Users
         public string Email { get; set; }
     }
 
-    public class CreateUserHandler : IRequestHandler<CreateUserCommand, int>
+    public class CreateUserHandler : IRequestHandler<CreateCustomerCommand, int>
     {
         private readonly IApplicationDbContext _context;
 
@@ -25,16 +24,16 @@ namespace Application.Users
             _context = context;
         }
 
-        public async Task<int> Handle(CreateUserCommand request, CancellationToken cancellationToken)
+        public async Task<int> Handle(CreateCustomerCommand request, CancellationToken cancellationToken)
         {
-            var entity = new User
+            var entity = new Customer
             {
                 FirstName = request.FirstName,
                 LastName = request.LastName,
                 Email = request.Email
             };
 
-            _context.Users.Add(entity);
+            _context.Customers.Add(entity);
 
             await _context.SaveChangesAsync(cancellationToken);
 

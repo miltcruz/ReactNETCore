@@ -1,11 +1,11 @@
 import React from 'react'
 import { Button, Form, FormGroup, Label, Input, Row } from 'reactstrap'
 
-export const CreateUser = ({ onChangeForm, createUser, user }) => {
+export const CreateCustomer = ({ onChangeForm, createCustomer, customer }) => {
 
     return (
         <div>
-            <h2>Create User</h2>
+            <h2>Create Customer</h2>
             <Form>
                 <Row>
                     <FormGroup className="col-md-6">
@@ -15,7 +15,7 @@ export const CreateUser = ({ onChangeForm, createUser, user }) => {
                             name="firstname"
                             id="firstname"
                             onChange={(e) => onChangeForm(e)}
-                            value={user.firstname}
+                            value={customer.firstname}
                             className="form-control"
                             placeholder="First Name"
                             required
@@ -28,7 +28,7 @@ export const CreateUser = ({ onChangeForm, createUser, user }) => {
                             name="lastname"
                             id="lastname"
                             onChange={(e) => onChangeForm(e)}
-                            value={user.lastname}
+                            value={customer.lastname}
                             className="form-control"
                             placeholder="Last Name"
                             required
@@ -43,14 +43,14 @@ export const CreateUser = ({ onChangeForm, createUser, user }) => {
                             name="email"
                             id="email"
                             onChange={(e) => onChangeForm(e)}
-                            value={user.email}
+                            value={customer.email}
                             className="form-control"
                             placeholder="Email"
                             required
                         />
                     </FormGroup>
                 </Row>
-                <Button onClick={(e) => createUser()} color="info" block>Create</Button>
+                <Button onClick={(e) => createCustomer()} color="info" block>Create</Button>
             </Form>
         </div>
     )

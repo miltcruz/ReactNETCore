@@ -7,7 +7,7 @@ export const Weather = (props) => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        const fetchData = async() => {
+        const fetchData = async () => {
             const response = await fetch('/api/weatherforecast');
             const data = await response.json();
             setForecasts(data)
@@ -49,8 +49,7 @@ export const Weather = (props) => {
 
     return (
         <div>
-            <h1 id="tabelLabel">Weather forecast</h1>
-            <p>This component demonstrates fetching data from the server.</p>
+            <h1 id="tabelLabel">Weather Forecast</h1>
             {contents}
         </div>
     );
